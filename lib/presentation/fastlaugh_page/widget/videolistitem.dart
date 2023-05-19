@@ -30,7 +30,7 @@ class _VideoListItemWidgetState extends State<VideoListItemWidget> {
     setState(() {
       imageList = result.results.map((MovieInfoModel result) {
         String imageUrl =
-            "https://image.tmdb.org/t/p/w500/${result.posterPath}?api_key=$apiKey";
+            "https://image.tmdb.org/t/p/w500/${result.posterPath}?api_key=$apikey";
         return imageUrl;
       }).toList();
     });

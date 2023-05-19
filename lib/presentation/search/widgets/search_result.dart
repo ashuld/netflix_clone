@@ -32,7 +32,9 @@ class SearchResultWidget extends StatelessWidget {
                     return const Center(
                       child: Column(
                         children: [
-                          CircularProgressIndicator(color: Colors.blue,),
+                          CircularProgressIndicator(
+                            color: Colors.blue,
+                          ),
                           Text('Please wait'),
                         ],
                       ),
@@ -40,19 +42,27 @@ class SearchResultWidget extends StatelessWidget {
                   }
 
                   if (snapshot.data == null) {
-                    return const Center(child: Text('No data found',style: TextStyle(fontSize: 20),));
+                    return const Center(
+                        child: Text(
+                      'No data found',
+                      style: TextStyle(fontSize: 20),
+                    ));
                   }
                   imageList =
                       snapshot.data.results.map((MovieInfoModel movieInfo) {
                     if (movieInfo.posterPath != null) {
                       imageUrl =
-                          'https://image.tmdb.org/t/p/w500${movieInfo.posterPath}?api_key=$apiKey';
+                          'https://image.tmdb.org/t/p/w500${movieInfo.posterPath}?api_key=$apikey';
                     }
                     return imageUrl;
                   }).toList();
 
                   if (imageList.isEmpty) {
-                    return  const Center(child: Text('No Movies Found',style: TextStyle(fontSize: 20),));
+                    return const Center(
+                        child: Text(
+                      'No Movies Found',
+                      style: TextStyle(fontSize: 20),
+                    ));
                   }
 
                   return GridView.count(
