@@ -30,8 +30,7 @@ class ScreenHome extends StatelessWidget {
                 }),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child:
-                      Stack(
+                  child: Stack(
                     children: [
                       ListView(
                         children: const [
@@ -52,13 +51,11 @@ class ScreenHome extends StatelessWidget {
                           MainTitleMovieCard(
                             title: "Popular Shows",
                             apiUrl: ApiEndPoints.tvpopular,
-
                           ),
                           kHeight,
                           MainTitleMovieCard(
                             title: "Upcoming",
                             apiUrl: ApiEndPoints.upcoming,
-
                           ),
                           kHeight,
                         ],
@@ -71,11 +68,13 @@ class ScreenHome extends StatelessWidget {
                               color: Colors.black.withOpacity(0.3),
                               child: Column(
                                 children: [
-                                  CustomAppBar(leftwidget: Image.network(
-                                        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/640px-Netflix_2015_N_logo.svg.png',
-                                        width: 45,
-                                        height: 45,
-                                      ),),
+                                  CustomAppBar(
+                                    leftwidget: Image.network(
+                                      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/640px-Netflix_2015_N_logo.svg.png',
+                                      width: 45,
+                                      height: 45,
+                                    ),
+                                  ),
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
@@ -85,13 +84,15 @@ class ScreenHome extends StatelessWidget {
                                         "Movies",
                                         style: kHomeTitleText,
                                       ),
-                                      Row(children: [
-                                        Text(
-                                        "Categories",
-                                        style: kHomeTitleText,
-                                      ),
-                                      const Icon(Icons.arrow_drop_down)
-                                      ],)
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "Categories",
+                                            style: kHomeTitleText,
+                                          ),
+                                          const Icon(Icons.arrow_drop_down)
+                                        ],
+                                      )
                                     ],
                                   )
                                 ],

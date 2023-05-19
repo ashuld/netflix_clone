@@ -8,7 +8,7 @@ class ScreenFastLaugh extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: PageView(
-          scrollDirection: Axis.vertical,
+      scrollDirection: Axis.vertical,
       children: List.generate(
           10,
           (index) => VideoListItemWidget(

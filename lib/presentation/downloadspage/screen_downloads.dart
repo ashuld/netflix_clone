@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/core/constants/constant.dart';
-
 import 'package:netflix/presentation/downloadspage/widgets/introductionsection.dart';
 import 'package:netflix/presentation/downloadspage/widgets/setupsection.dart';
 import 'package:netflix/presentation/widgets/customappbar.dart';
-
-
 
 class ScreenDownload extends StatelessWidget {
   ScreenDownload({super.key});

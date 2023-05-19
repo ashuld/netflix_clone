@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/domain/apiendpoint.dart';
@@ -47,7 +46,7 @@ class _VideoListItemWidgetState extends State<VideoListItemWidget> {
   Widget build(BuildContext context) {
     final videoUrl = dummyVideoUrls[widget.index % dummyVideoUrls.length];
     return Stack(children: [
-     FastLaughVideoPlayer(videoUrl: videoUrl, onStateChanged: (boolean){}),
+      FastLaughVideoPlayer(videoUrl: videoUrl, onStateChanged: (boolean) {}),
       Align(
         alignment: Alignment.bottomLeft,
         child: Padding(
@@ -68,27 +67,28 @@ class _VideoListItemWidgetState extends State<VideoListItemWidget> {
                       ))),
 
               //right side
-              if(imageList.isNotEmpty) ...[
+              if (imageList.isNotEmpty) ...[
                 Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children:  [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: CircleAvatar(
-                      radius: 30,
-                      backgroundImage: NetworkImage(
-                        imageList[widget.index],
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundImage: NetworkImage(
+                          imageList[widget.index],
+                        ),
                       ),
                     ),
-                  ),
-                  const VideoActionWidget(icon: Icons.emoji_emotions, title: "LOL"),
-                  const VideoActionWidget(icon: Icons.add, title: "My List"),
-                  const VideoActionWidget(icon: Icons.share, title: "Share"),
-                  const VideoActionWidget(icon: Icons.play_arrow, title: "Play"),
-                ],
-              )
+                    const VideoActionWidget(
+                        icon: Icons.emoji_emotions, title: "LOL"),
+                    const VideoActionWidget(icon: Icons.add, title: "My List"),
+                    const VideoActionWidget(icon: Icons.share, title: "Share"),
+                    const VideoActionWidget(
+                        icon: Icons.play_arrow, title: "Play"),
+                  ],
+                )
               ]
-              
             ],
           ),
         ),
