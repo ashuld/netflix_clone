@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/constants/constant.dart';
 
-class CustomeAppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget {
   final Widget leftwidget;
   //final String title;
-  const CustomeAppBar({super.key,required this.leftwidget});
+  const CustomAppBar({super.key,required this.leftwidget});
 
   @override
   Widget build(BuildContext context) {

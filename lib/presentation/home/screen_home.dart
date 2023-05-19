@@ -71,7 +71,7 @@ class ScreenHome extends StatelessWidget {
                               color: Colors.black.withOpacity(0.3),
                               child: Column(
                                 children: [
-                                  CustomeAppBar(leftwidget: Image.network(
+                                  CustomAppBar(leftwidget: Image.network(
                                         'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/640px-Netflix_2015_N_logo.svg.png',
                                         width: 45,
                                         height: 45,

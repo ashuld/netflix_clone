@@ -21,7 +21,7 @@ class ScreenDownload extends StatelessWidget {
     return Scaffold(
         appBar: const PreferredSize(
             preferredSize: Size.fromHeight(60),
-            child: CustomeAppBar(
+            child: CustomAppBar(
               leftwidget: Text(
                 "Downloads",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900),
